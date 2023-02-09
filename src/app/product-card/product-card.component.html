@@ -1,0 +1,16 @@
+
+
+
+
+
+<div class="card shadow mb-3" style="width: 18rem;" >
+  <img src="{{product.image}}" class="card-img-top  "  style="height: 250px;" alt="...">
+  <div class="card-body  text-center ">
+    <h5 class="card-title">{{product.name}}</h5>
+    <p class="card-text">{{product.price}}$</p>
+    <p  *ngIf="product.count==0" class="text-danger" > out of stok</p>
+    <p  *ngIf="product.count>0" class="text-success" >  of stok</p>
+    <button  class="btn btn-primary me-3" (click)="show(product.id)">View</button>
+    <button class="btn btn-info">Add To Card</button>
+  </div>
+</div>

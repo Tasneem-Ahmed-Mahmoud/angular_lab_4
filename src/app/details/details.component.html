@@ -1,0 +1,26 @@
+<div class="container  mt-5 pt-5">
+
+<div class="card mb-3 shadow" style="max-width: 1000px;">
+  <div class="row g-0">
+    <div class="col-md-4 border border-3">
+      <img src="{{productDetails['image']}}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body p-5">
+
+        <h3 class="card-text">Name : {{productDetails.name}}</h3>
+        <h5 class="card-title">Description : {{productDetails.description}}</h5>
+        <p>Created At :{{productDetails.createdAt | date : 'MMMM YYYY'}}</p>
+        <p>Rate :{{productDetails.rate }}</p>
+        <p>Price :{{productDetails.price }}$</p>
+        <p>Reviwes :{{productDetails.reviews[0] }}</p>
+        <p  *ngIf="productDetails.count==0" class="text-danger" > out of stok</p>
+        <p  *ngIf="productDetails.count>0" class="text-success" >  of stok</p>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
